@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Helena Art Store</title>
+  <desc id="desc">Neon gradient favicon evoking a digital gallery orb</desc>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#fff3ff" />
+      <stop offset="45%" stop-color="#9c6bff" />
+      <stop offset="100%" stop-color="#2b0b4f" />
+    </radialGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9de1" />
+      <stop offset="50%" stop-color="#7d8dff" />
+      <stop offset="100%" stop-color="#4de8ff" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#080821" />
+  <circle cx="32" cy="30" r="18" fill="url(#glow)" />
+  <path d="M14 42c6 8 30 8 36 0" fill="none" stroke="url(#ring)" stroke-width="5" stroke-linecap="round" />
+</svg>
