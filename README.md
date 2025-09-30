@@ -14,12 +14,13 @@ Install dependencies once:
 npm install
 ```
 
-Copy the sample environment files and adjust values when needed:
+Copy the sample environment file and adjust values when needed:
 
 ```bash
-cp backend/.env.example backend/.env
-cp frontend/.env.example frontend/.env
+cp .env.example .env
 ```
+
+The backend `ConfigModule` and the Vite dev server both consume the same root `.env`. Server-only settings (e.g. MongoDB credentials) stay unprefixed, while frontend-facing values must be prefixed with `VITE_` so they are exposed to the browser build.
 
 ## Running the apps
 

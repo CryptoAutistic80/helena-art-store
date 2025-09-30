@@ -62,6 +62,7 @@ export const buildConfig: ConfigFactory<AppConfig> = () => {
 export const createConfigModuleOptions = (): ConfigModuleOptions => ({
   isGlobal: true,
   cache: true,
+  envFilePath: ['.env'],
   load: [buildConfig],
   validate: (config: Record<string, unknown>) => envSchema.parse(config),
 });
