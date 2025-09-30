@@ -1,0 +1,19 @@
+{
+  "name": "core-utils",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/core/utils/src",
+  "projectType": "library",
+  "tags": ["scope:shared", "domain:core", "layer:util", "type:lib"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/core/utils",
+        "main": "libs/core/utils/src/index.ts",
+        "tsConfig": "libs/core/utils/tsconfig.lib.json",
+        "assets": ["libs/core/utils/*.md"]
+      }
+    }
+  }
+}
