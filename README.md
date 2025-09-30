@@ -24,6 +24,55 @@ The backend `ConfigModule` and the Vite dev server both consume the same root `.
 
 ## Running the apps
 
+### With Docker (Recommended)
+
+The easiest way to run the complete stack with MongoDB:
+
+```bash
+# Copy the environment file and adjust as needed
+cp .env.example .env
+
+# Start all services (MongoDB, backend, frontend) in detached mode
+docker-compose up -d --build
+
+# View logs from all services
+docker-compose logs -f
+
+# View logs from a specific service
+docker-compose logs -f backend
+docker-compose logs -f frontend
+docker-compose logs -f mongodb
+
+# Check the status of all services
+docker-compose ps
+
+# Stop all services (containers remain for quick restart)
+docker-compose stop
+
+# Start stopped services
+docker-compose start
+
+# Stop and remove all containers
+docker-compose down
+
+# Stop and remove all containers and volumes (⚠️ data will be lost)
+docker-compose down -v
+
+# Rebuild a specific service
+docker-compose up -d --build backend
+
+# Execute commands inside a running container
+docker-compose exec backend sh
+docker-compose exec mongodb mongosh
+```
+
+The services will be available at:
+- **Frontend**: http://localhost:4200
+- **Backend API**: http://localhost:3000/api
+- **MongoDB**: mongodb://localhost:27017
+
+### Local Development
+
 ```bash
 # Start the NestJS API on http://localhost:3000
 npm run start
