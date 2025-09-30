@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@helena-art-store/api-types": ["libs/api-types/src/index.ts"],
+      "@helena-art-store/config": ["libs/config/src/index.ts"],
+      "@helena-art-store/core/utils": ["libs/core/utils/src/index.ts"],
+      "@helena-art-store/shared/testing": ["libs/shared/testing/src/index.ts"],
+      "@helena-art-store/ui": ["libs/ui/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
